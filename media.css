@@ -1,0 +1,18 @@
+@media screen and (max-width: 600px) {
+    
+
+body{
+    display: block;
+}
+
+/*CARDS*/
+
+.cards-container{
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.card, .middle-card{
+    width: 333px;
+}
+}

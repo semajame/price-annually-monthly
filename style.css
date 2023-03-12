@@ -1,0 +1,267 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+
+### Neutral
+
+- Very Light Grayish Blue: hsl(240, 78%, 98%)
+- Light Grayish Blue: hsl(234, 14%, 74%)
+- Grayish Blue: hsl(233, 13%, 49%)
+- Dark Grayish Blue: hsl(232, 13%, 33%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+font-family: 'Montserrat', sans-serif;
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weight: 700 */
+
+
+:root{
+    --very-light-grayish-blue: hsl(240, 78%, 98%);
+    --light-grayish-blue: hsl(234, 14%, 74%);
+    --grayish-blue: hsl(233, 13%, 49%);
+    --dark-grayish-blue: hsl(232, 13%, 33%);
+    --linear-gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+    --font-size: 0.8rem;
+    --font-size2: 1rem;
+    --font-size3: 1.9rem;
+    --font-size4:2.2rem;
+    --font-size5: 3rem;
+    --font-size6: 4.5rem;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background: url(/img/bg-top.svg)no-repeat right;
+    background-size: 100%;
+}
+
+.container{
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.pricing-header{
+    margin-bottom: 1rem;
+    color: var(--grayish-blue);
+}
+
+.switch-container{
+    margin-bottom: 2rem;
+}
+
+.switch-container span{
+    display: inline-block;
+}
+
+.annualy, .monthly{
+    color: var(--light-grayish-blue);
+}
+
+/*CARDS*/
+
+.cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem 2rem 1rem;
+    font-size: var(--font-size);
+    
+}
+
+span{
+    display: block;
+    font-size: var(--font-size2);
+    padding: 1rem 0;
+}
+
+.card, .middle-card{
+    color: var(--grayish-blue);
+    width: 400px;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0px 4px 32px -13px rgba(0,0,0,0.75);
+}
+
+.middle-card{
+    color: white;
+    background: linear-gradient(90deg, rgba(102,111,233,1) 0%, rgba(52,59,214,1) 100%);
+    padding: 1.5rem 0;
+    border-radius: 10px;
+}
+
+.right-card{
+    border-radius: 0 10px 10px 0;
+}
+
+.cards h2{
+    
+    color: var(--dark-grayish-blue);
+}
+
+h2{
+    margin: 1.5rem 0 0 0.6rem;
+}
+
+.price, .pricee{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-grayish-blue);
+    
+}
+
+.middle-price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.monthly-price .dollar-sign, .middle-monthly-price .dollar-sign, .pricee .dollar-sign{
+    font-size: var(--font-size3);
+    margin-right: 0.3rem;
+}
+
+.price, .middle-price, .pricee{
+    padding: 1.5rem 0;
+    font-size: var(--font-size6);
+}
+
+.users, .storage, .send, .middle-users, .middle-storage, .middle-send{
+    border-top: 1px solid rgb(192, 190, 190);
+    margin: 0 3rem;
+}
+
+.send, .middle-send{
+    border-bottom: 1px solid rgb(192, 190, 190);
+}
+
+button{
+    width: 70%;
+    margin: 3rem 0;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(102,111,233,1) 0%, rgba(52,59,214,1) 100%);
+    border: none;
+    padding: 0.7rem;
+}
+
+
+.middle-button{
+    padding: 0.7rem;
+    background: white;
+}
+
+.middle-button a{
+    color: hsl(237, 63%, 64%);
+}
+
+button a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.2rem;
+}
+
+/* ACTIVE */
+.monthly-price, .middle-monthly-price, .right-price{
+    display: none;
+    padding: 1.5rem 0;
+    font-size: var(--font-size6);
+    color: var(--dark-grayish-blue);
+}
+
+.middle-monthly-price.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    font-size: var(--font-size6);
+    color: white;
+}
+
+.monthly-price.active, .right-price.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    font-size: var(--font-size6);
+    color: var(--dark-grayish-blue);
+}
+
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 62px;
+    height: 35px;
+    margin: 0 1rem;
+   }
+   
+   /* Hide default HTML checkbox */
+   .switch input {
+    opacity: 1;
+    width: 0;
+    height: 0;
+   }
+   
+   /* The slider */
+   .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background: linear-gradient(90deg, rgba(102,111,233,1) 0%, rgba(52,59,214,1) 100%);
+    transition: .4s;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    transition: 300ms;
+   }
+   
+   .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.9em;
+    width: 1.9em;
+    border-radius: 16px;
+    left: 1.2px;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px #999999;
+    transition: 300ms;
+   }
+   
+   input:checked + .slider {
+    background: linear-gradient(90deg, rgba(102,111,233,1) 0%, rgba(52,59,214,1) 100%);
+    border: 1px solid transparent;
+   }
+   
+   input:checked + .slider:before {
+    transform: translateX(1.5em);
+   }
